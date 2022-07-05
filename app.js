@@ -10,7 +10,6 @@ let activePage = document.querySelector(".active-page")
 
 
 
-const API_KEY = 'edf63b3d';
 
 let search = "marvel";
 let page = 1;
@@ -18,41 +17,42 @@ let page = 1;
 
 
 let renderMovies = function (arr, htmlElement) {
-
+    
     let moviesFragment = document.createDocumentFragment();
-
+    
     elList.innerHTML = null
-
+    
     arr.forEach(movie => {
-
+        
         let clonedFilmTemplate = elTemplate.cloneNode(true)
 
         clonedFilmTemplate.querySelector(".film__img").src = movie.Poster;
         clonedFilmTemplate.querySelector(".film__title").textContent = movie.Title
         clonedFilmTemplate.querySelector(".film__year").textContent = movie.Year
         clonedFilmTemplate.querySelector(".film__type").textContent = movie.Type
-
+        
         moviesFragment.appendChild(clonedFilmTemplate)
-
+        
     });
-
-
+    
+    
     htmlElement.appendChild(moviesFragment)
 
-
-
+    
+    
 }
 
+const API_KEY = 'edf63b3d';
 
 let getMovies = async function () {
-    let request = await fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${search}&page=${page}`)
-
+    let request = await fetch(`https://omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${search}&page=${page}`)
+    
     let data = await request.json()
-
+    
     if (data.Respone = "True" && data.Search.length > 0) {
         renderMovies(data.Search, elList)
     }
-
+    
     numbers(data.totalResults, numbersBtn)
 
 }
