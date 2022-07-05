@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uyga vazifa 11</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<body>
+    <h1 class="title">Movies</h1>
+
+
+    <input type="text" class="input__text" required placeholder="Search films">
+
+    <ul class="list"></ul>
+
+    <template class="template">
+        <li style="height:450px;">
+            <img class="film__img" src="http://via.placeholder.com/300" alt="" height="300" width="300">
+            <h2 style="width: 300px;" class="film__title">Title</h2>
+            <p style="display: inline-block; margin-right: 10px; margin-top: 10px;" class="film__year">2003</p>
+            <span class="film__type">Series</span>
+        </li>
+    </template>
+    <div class="btn">
+        <button class="prevBtn">prev</button>
+        <span class="numbers-btn">
+
+        </span>
+        <button class="nextBtn">next</button>
+    </div>
+    <span style="text-align: center; display: flex;">
+        <p class="active-page" style="display: inline-block; margin: 0 auto; font-size: 22px; border: solid 1px ; width: 50px; height: 30px; margin-bottom: 10px; border-radius: 10px; background-color: blue; color: white;">1</p>
+    </span>
+    <script src="./app.js"></script>
+</body>
+
+</html>
