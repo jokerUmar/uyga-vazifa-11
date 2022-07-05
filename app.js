@@ -10,7 +10,7 @@ let activePage = document.querySelector(".active-page")
 
 
 
-const API_KEY = '81afce36';
+const API_KEY = 'edf63b3d';
 
 let search = "marvel";
 let page = 1;
